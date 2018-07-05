@@ -7,7 +7,7 @@ class Pessoa(object):
     Essa classe serve como classe básica para a definição de pessoas físicas e jurídicas.
     """
 
-    def __init__(self, nome="", idade=0, apelido="Zé", endereco='Beco sem Nome', ocupacao=""):
+    def __init__(self, nome="", idade=0, apelido="Zé", endereco='Beco sem Nome', ocupacao="", genero='Masculino'):
         """Construtor da classe.
 
         O construtor cria uma nova instância da classe, exigindo um nome e uma idade.
@@ -25,6 +25,9 @@ class Pessoa(object):
 
         #: Apelido da pessoa.
         self.apelido = apelido
+
+        #: Gênero da pessoa
+        self.genero = genero
 
         #: Ocupação principal.
         self.ocupacao = ocupacao
@@ -44,6 +47,10 @@ class Pessoa(object):
     def set_apelido(self, apelido):
         """Método de escrita no atributo ``apelido``."""
         self.apelido = apelido
+
+    def set_genero(self, genero):
+        """Método de escrita no atributo ``genero``."""
+        self.genero = genero
 
     def set_ocupacao(self, ocupacao):
         """Método de escrita no atributo ``ocupacao``."""
@@ -68,3 +75,7 @@ class Pessoa(object):
     def get_ocupacao(self):
         """Método de leitura do atributo ``ocupacao``."""
         return self.ocupacao
+
+    def get_genero(self):
+        """Método de leitura do atributo ``genero``."""
+        return self.genero
